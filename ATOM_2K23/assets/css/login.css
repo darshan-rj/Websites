@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Nova+Round&family=Poppins&family=Raleway&family=Roboto&family=Shippori+Antique&family=Stoke&display=swap');
+
+@font-face {
+  font-family: "AquireBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("AquireBold"), url("AquireBold.otf") format("opentype");
+}
+body {
+  background: #f5f5f5;
+}
+
+@media only screen and (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.login-box {
+  background: url(../Polygon.svg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  margin: 50px auto;
+  min-height: 700px;
+  -webkit-box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "AquireBold";
+  font-size: 54px;
+  text-align: center;
+  color: #888888;
+  /* margin-bottom: 20px; */
+}
+
+.logo .logo-font {
+  color: #ff3b79;
+  
+}
+
+@media only screen and (max-width: 767px) {
+  .logo1 {
+    font-size: 34px;
+  }
+}
+
+.header-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family:Aquatico;
+  font-color:#e9415a;
+
+}
+
+.login-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form .form-control {
+  border-radius: 0;
+  margin-bottom: 30px;
+  background-color: #ffffff00;
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: rgb(255, 255, 255);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: rgb(255, 255, 255);
+}
+.login-form .form-group {
+  position: relative;
+}
+
+.login-form .form-group .forgot-password {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+}
+
+.login-form .btn {
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.login-form .btn.btn-primary {
+  background: #3bc3ff;
+  border-color: #31c0ff;
+}
+
+.slider-feature-card {
+  background: #fff;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.slider-feature-card img {
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.slider-feature-card h3,
+.slider-feature-card p {
+  margin-bottom: 30px;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators li {
+  cursor: pointer;
+}

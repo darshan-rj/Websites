@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Imprima&family=Nova+Round&family=Poppins&family=Raleway&family=Roboto&family=Shippori+Antique&family=Stoke&display=swap");
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+body{
+  margin:0;
+  width:100%;
+  height:100%;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #181818;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #001d3d;
+  border-radius: 50px;
+  /* color: rgba(255, 55, 55, 0.1); */
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 10s ease-in forwards infinite;
+}
+
+undefined .background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 45vw;
+  top: 33vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 0s;
+  left: 20vw;
+  top: 7vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 0s;
+  left: 98vw;
+  top: 78vh;
+  border-color: #003049;
+  opacity: 0.5;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 1s;
+  left: 3vw;
+  top: 55vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 1s;
+  left: 55vw;
+  top: 25vh;
+  border-color: #001d3d;
+  opacity: 0.5;
+}
+
+.background li:nth-child(5) {
+  animation-delay: 2s;
+  left: 76vw;
+  top: 83vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(6) {
+  animation-delay: 2s;
+  left: 20vw;
+  top: 30vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(7) {
+  animation-delay: 3s;
+  left: 12vw;
+  top: 40vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(8) {
+  animation-delay: 4s;
+  left: 60vw;
+  top: 80vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(9) {
+  animation-delay: 5s;
+  left: 74vw;
+  top: 50vh;
+  opacity: 0.5;
+}
+
+.background li:nth-child(10) {
+  animation-delay: 5s;
+  left: 18vw;
+  top: 68vh;
+  opacity: 0.5;
+}
+
+.header {
+  margin:0;
+  width:100%;
+  justify-content: center;
+  padding: 5px;
+  margin: 0;
+  background: #252525;
+}
+
+.header h2 {
+  text-align: center;
+  font-family: AquireBold;
+  font-size: 48px;
+  background-clip: text;
+  background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-title {
+  justify-content: center;
+  align-items:center;
+  padding: 5px;
+  margin: 0;
+  /* background:#252525; */
+}
+
+.page-title h4 {
+  float:center;
+  text-align: center;
+  font-family: Aquatico;
+  font-size: 30px;
+  background-clip: text;
+  background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cards {
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 5%;
+}
+
+.date {
+  justify-content:center;
+  align-items:center;
+  float:center;
+  text-align:center;
+  margin:0;
+  display: block;
+  vertical-align: middle;
+  transform: translateY(25%);
+  background-clip: text;
+  background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: MonumentReg;
+}
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #cd3b4e;
+  --secondary-color: #3d0000;
+  width: 210px;
+  font-family: "Raleway";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #ffd6d6;
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0 / 3%);
+  position: relative;
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.card .card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family:Aquatico;
+}
+
+.card .card__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.card:hover .card__date {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+
+.card:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    background: #252525;
+  }
+
+  .header h2 {
+    text-align: center;
+    font-family: AquireBold;
+    font-size: 32px;
+    background-clip: text;
+    background: -webkit-linear-gradient(#ff5047, #ff0048);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-title {
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    /* background:#252525; */
+  }
+
+  .page-title h4 {
+    text-align: center;
+    font-family: 'Aquatico';
+    font-size: 34px;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg,  #ff0048, #ff5047);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .row {
+    /* display: flex;
+    flex-direction: column; */
+    justify-conent: center;
+    align-items: center;
+    margin-right: 10%;
+  }
+
+  .date {
+    margin-right: 0;
+    display: block;
+    vertical-align: middle;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: MonumentReg;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    background: #252525;
+  }
+
+  .header h2 {
+    text-align: center;
+    font-family: AquireBold;
+    font-size: 32px;
+    background-clip: text;
+    background: -webkit-linear-gradient(#ff5047, #ff0048);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-title {
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    /* background:#252525; */
+  }
+
+  .page-title h4 {
+    text-align: center;
+    font-family: FlareReg;
+    font-size: 28px;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg,  #ff0048, #ff5047);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .row {
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    left: 0;
+  }
+
+  .date {
+    margin-right: 0;
+    display: block;
+    vertical-align: middle;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: MonumentReg;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 728px) {
+  .header {
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    background: #252525;
+  }
+
+  .header h2 {
+    text-align: center;
+    font-family: AquireBold;
+    font-size: 32px;
+    background-clip: text;
+    background: -webkit-linear-gradient(#ff5047, #ff0048);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-title {
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    /* background:#252525; */
+  }
+
+  .page-title h4 {
+    text-align: center;
+    font-family: FlareReg;
+    font-size: 34px;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #E9415A, #FED0D0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+  }
+
+  .date {
+    margin-right: 0;
+    display: block;
+    vertical-align: middle;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: MonumentReg;
+    text-align: center;
+  }
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+  .header {
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    background: #252525;
+  }
+
+  .header h2 {
+    text-align: center;
+    font-family: AquireBold;
+    font-size: 32px;
+    background-clip: text;
+    background: -webkit-linear-gradient(#ff5047, #ff0048);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-title {
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    /* background:#252525; */
+  }
+
+  .page-title h4 {
+    text-align: center;
+    font-family: FlareReg;
+    font-size: 34px;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg,  #ff0048, #ff5047);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .date {
+    margin-right: 0;
+    display: block;
+    vertical-align: middle;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: MonumentReg;
+    text-align: center;
+  }
+
+
+  .date #ml{
+    margin-right: 0;
+    margin-left:50px;
+    display: block;
+    vertical-align: middle;
+    background-clip: text;
+    background: -webkit-linear-gradient(45deg, #e9415a, #bd0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: MonumentReg;
+    text-align: center;
+  }
+}
